@@ -53,7 +53,7 @@ EMAIL=
 ## DUPLICITY BACKUP LOCTIONS                          ##
 ## Enter locations to backup / exclude                ##
 ## Multiple directories supported, space seperated    ##
-BACKUP_LOCATIONS="/home"
+BACKUP_LOCATIONS="/home /etc /srv"
 BACKUP_EXCLUDES=""
 ########################################################
 
@@ -66,7 +66,8 @@ BACKUP_EXCLUDES=""
 ########################################################
 ## DUPLICITY VARS                                     ##
 ########################################################
-FTP_FOLDER=`hostname -f`_duplicity
+#FTP_FOLDER=`hostname -f`_duplicity
+FTP_FOLDER="backups"
 DUP_ARCHIVE=ftp://$FTP_USER@$FTP_SERVER/$FTP_FOLDER/
 export PASSPHRASE=$GPG FTP_PASSWORD=$FTP_PASS
 ########################################################
